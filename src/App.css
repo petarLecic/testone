@@ -1,0 +1,256 @@
+* {
+    background-color: transparent;
+    box-sizing: border-box;
+    color: #303133;
+    font-family: HelVetica, Arial, sans-serif;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+.app {
+    display: flex;
+    flex-flow: column;
+    height: 100vh;
+}
+
+.header{
+    background-color: #F3F3F3;
+    height: 28px;
+    width: 100%;
+}
+
+.header-heading {
+    color: #000000;
+    font-size: 15px;
+    line-height: 17px;
+    padding: 6px 0 4px 16px;
+}
+
+.gist-list {
+    flex: 1;
+    margin-left: 16px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.gist-list::-webkit-scrollbar {
+    width: 14px;
+}
+
+.gist-list::-webkit-scrollbar-track {
+    background-color: #FAFAFA;
+    outline: 1px solid #EAEAEA;
+}
+
+.gist-list::-webkit-scrollbar-thumb {
+    background-color: #D8D8D8;
+    border: 2px solid #FAFAFA;
+    border-radius: 6.5px;
+    height: 60%;
+}
+
+.gist-list::-webkit-scrollbar-track-piece:vertical:start {
+    margin-top: 10px;
+}
+
+.gist-list::-webkit-scrollbar-track-piece:vertical:end {
+    margin-bottom: 10px;
+}
+
+.gist-card {
+    align-items: center;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #EAEAEA;
+    display: flex;
+    height: 100px;
+}
+
+.gist-card:hover {
+    cursor: pointer;
+}
+
+.avatar-wrapper, .avatar-wrapper-selected {
+    height: 74px;
+}
+
+.avatar-wrapper-selected {
+    background-color: #303133;
+}
+
+.avatar, .avatar-selected {
+    width: 74px;
+}
+
+.avatar-selected {
+    opacity: 0.5;
+}
+
+.file-name, .file-name-selected {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-left: 16px;
+}
+
+.file-name-selected {
+    color: #06A9F6;
+}
+
+.message-wrapper {
+    height: 3000px;
+}
+
+.message {
+    line-height: 28px;
+    font-size: 22px;
+    font-weight: 400;
+    left: 48%;
+    position: fixed;
+    top: 48%;
+    width: fit-content;
+}
+
+.pagination {
+    align-items: center;
+    background-color: #FFFFFF;
+    display: flex;
+    height: 40px;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.pagination-btns {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 8px;
+    margin-right: 16px;
+    width: 53px;
+}
+
+.page-num, .page-num-current, .pagination-dots {
+    border: none;
+    color: #06A9F6;
+    font-size: 12px;
+    height: 16px;
+    line-height: 16px;
+    margin: 0 2px 0 2px;
+}
+
+.page-num-current {
+    color: #303133;
+}
+
+.page-num:hover {
+    cursor: pointer;
+}
+
+.page-num-current:hover {
+    cursor: unset;
+}
+
+.pagination-btn, .pagination-btn-disabled {
+    border: none;
+    height: 24px;
+    position: relative;
+    width: 24px;
+}
+
+.pagination-btn-disabled {
+    opacity: 0.3;
+}
+
+.pagination-btn:active {
+    opacity: 0.5;
+}
+
+.pagination-btn:hover {
+    cursor: pointer;
+}
+
+.arrow-btn-right, .arrow-btn-left {
+    height: 50%;
+    width: 50%;
+    left: calc(50% - 6px);
+    position: absolute;
+    top: calc(50% - 6px);
+}
+
+.arrow-btn-left {
+    transform: rotate(180deg)
+}
+
+.fade-away-avatar {
+    animation: fadeInOut ease 1s;
+    -webkit-animation: fadeInOut ease 1s;
+    -moz-animation: fadeInOut ease 1s;
+    -o-animation: fadeInOut ease 1s;
+    -ms-animation: fadeInOut ease 1s;
+
+    left: calc(50% - 100px);
+    height: 200px;
+    position: absolute;
+    top: calc(50% - 100px);
+    width: 200px;
+    opacity: 0;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-o-keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-ms-keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
